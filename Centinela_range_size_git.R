@@ -52,7 +52,7 @@ rm(end)
 
 #### RUN Loop through species names
 ####
-species_names <- elev_csv$species[1]
+species_names <- elev_csv$species
 
 for (targetsp in species_names) {
   # Extract coordinates
@@ -91,7 +91,8 @@ for (targetsp in species_names) {
 }
 
 ## write EOO dataframe to file
-write.table(EOO_dataframe, file = EOO_df_name)
+write.table(EOO_dataframe, file = paste(EOO_df_name))
 ## write sf multipolygons to file. 
-st_write(EOO_spatial, file = EOO_sf_name)
+st_write(EOO_spatial, paste(EOO_sf_name), append=TRUE)
 
+## DONE
