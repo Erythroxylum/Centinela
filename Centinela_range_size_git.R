@@ -8,11 +8,17 @@
 ##### 4) Run EOO.computing: input species_coordinates.csv and clamped raster file based on (3), species_elevation_ranges.csv
 ###################################
 
+## Install ConR, necessary for Harvard FASRC
+library(devtools)
+devtools::install_github("gdauby/ConR")
+
+# load libraries
+library(ConR)
 library(raster)
 library(sf)
 library(dplyr)
-library(ConR)
-library(terra) 
+library(terra)
+library(lwgeom)
 
 ## 
 
@@ -24,9 +30,9 @@ setwd("./")
 ## GeoTIFF raster
 raster_path <- "elevation_PAN_COL_PER_ECU_0.5sec.tif"
 ## CSV of elevation ranges
-elev_csv_path <- "elev_species_final.csv"
+elev_csv_path <- "elevchunk_aa"
 ## GBIF archive
-GBIF <- ".csv"
+GBIF <- "Centinela_GBIF_873sp_28-nov-23_382204records_clean_CentinelaManual.csv"
 # name of output EOO table
 EOO_df_name <- "EOO_results.txt"
 # name of output shapefile
@@ -65,7 +71,8 @@ for (targetsp in species_names) {
     
   # Apply the EOO.computing function with terra
   clipped_rastert <- terra::clamp(terra_raster, lower = elevation$min, upper = elevation$max, values=FALSE)
-  x <- terra::as.polygons(clipped_rastert, round=TRUE, aggregate=TRUE, values=FALSE,na.rm=TRUE)
+  #x <- terra::as.polygons(clipped_rastert, round=TRUE, aggregate=TRUE, values=FALSE,na.rm=TRUE)
+  x <- terra::as.polygons(clipped_rastert, values=FALSE,na.rm=TRUE)
   s <- sf::st_as_sf(x)
   EOO_result <- EOO.computing(
     XY=coords_var, 
@@ -80,6 +87,7 @@ for (targetsp in species_names) {
    } else {
     EOO_dataframe <- rbind(EOO_dataframe, EOO_result$results)
    }
+  write.table(EOO_result$results, paste(gsub(" ","_",targetsp),"_EOO.txt",sep=""))
   
 # To generate spatial data for each taxon, change export_shp to TRUE and include code below to generate new dataframe.
   # Print the resulting dataframe
