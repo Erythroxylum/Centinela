@@ -16,6 +16,8 @@ GBIF_download_species_notes.txt: Description of nomenclatural differences betwee
 Centinela_rgbif_git.R: R scripts for downloading and cleaning GBIF data.
 
 ## Species ranges
+Centinela_getElevationRanges.R: scripts to generate elevation raster and define elevation ranges for a list of species.
+
 elev_species_final.csv: elevational ranges per species 
 
 elevation_PAN_COL_PER_ECU_0.5sec.tif: elevation raster
