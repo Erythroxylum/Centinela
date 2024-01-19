@@ -1,0 +1,161 @@
+# SPECIES WITH NO MATCH ON GBIF (13)
+Dressleria claviodora Hills & Cristenson
+Epidendrum monicarmasiae Cornejo & H√°gsater
+Philodendron dodbenziorum Croat
+Philodendron nelsonzamorae Croat & Grayum
+Protium sp. nov. ined. Daly
+Rhodospatha rodrigueziae Croat
+Rudgea zappiae C.M. Taylor & Bruniera
+Sciodaphyllum albidodiscum ined
+Sciodaphyllum dodsonii ined.
+Sciodaphyllum occidentale ined.
+Sciodaphyllum pilarense ined.
+Stenospermation dodsonii Croat & Delannay
+Stenospermation rodrigueziae Croat
+
+# SPECIES WITH NO GBIF COORDINATE RECORDS WITHIN PA,CO,EC,PE (13)
+Anthurium_monteverdense
+Casimiroa_tetrameria
+Elaphoglossum_cinereum
+Hoffmannia_josefina
+Maxillaria_vanderwerffii
+Mikania_leucophylla
+Oreopanax_donnell-smithii
+Piper_candelarianum
+Polybotrya_gomezii
+Rudgea_citrifolia
+Teuscheria_integrilabia
+Trichopilia_steinii
+Zootrophion_alvaroi
+
+# SYNONYMIZED (3 are same synonym)
+sp914	GBIF_accepted
+Pleurothallis congruens	Acianthera cogniauxiana
+Pleurothallis verecunda	Acianthera verecunda
+Alternanthera mexicana	Alternanthera lanceolata
+Thelypteris resinifera	Amauropelta resinifera
+Pleurothallis angulosa	Anathallis angulosa
+Pleurothallis implexa	Anathallis lasioglossa
+Ocotea sodiroana	Andea sodiroana
+Aphelandra leiophylla	Aphelandra aurantiaca
+Aphelandra flammea	Aphelandra vitellina
+Encephalosphaera vitellina	Aphelandra vitellina
+Tovomita sphenophylla	Arawakia sphenophylla
+Erythrodes jamesonii	Aspidogyne jamesonii
+Loreya umbellata	Bellucia umbellata
+Billia columbiana	Billia rosea
+Topobea dodsoniorum	Blakea dodsoniorum
+Mesospinidium incantans	Brassia incantans
+Brosimum utile	Brosimum utile
+Carapa nicaraguensis	Carapa guianensis
+Chaptalia nutans	Chaptalia nutans
+Chelonanthus acutangulus	Chelonanthus alatus
+Chrysophyllum panamense	Chrysophyllum argenteum
+Clusia longistyla	Clusia rotundata
+Coccoloba williamsii	Coccoloba lehmannii
+Grammitis serrulata	Cochlidium serrulatum
+Scelochilus gentryi	Comparettia gentryi
+Ctenitis ampla	Ctenitis sloanei
+Beadlea epiphytica	Cyclopogon epiphyticus
+Capparis ecuadorica	Cynophalla ecuadorica
+Justicia comata	Dianthera comata
+Anomospermum grandifolium	Elissarrhena longipes
+Conyza laevigata	Erigeron laevigatus
+Ficus tuerckheimii	Ficus aurea
+Ardisia pichinchana	Geissanthus pichinchana
+Dicranopteris pectinata	Gleichenella pectinata
+Gloxinia perennis	Gloxinia perennis
+Calathea multicincta	Goeppertia multicincta
+Calathea roseobracteata	Goeppertia roseobracteata
+Thelypteris eggersii	Goniopteris eggersii
+Desmodium adscendens	Grona adscendens
+Heliconia marmoliana	Heliconia reticulata
+Tournefortia gigantifolia	Heliotropium gigantifolium
+Tournefortia bicolor	Heliotropium verdcourtii
+Asplenium laetum	Hymenasplenium laetum
+Asplenium repandulum	Hymenasplenium repandulum
+Asplenium volubile	Hymenasplenium volubile
+Garcilassa rivularis	Hymenostephium rivularis
+Iresine diffusa	Iresine diffusa
+Sclerothrix fasciculata	Klaprothia fasciculata
+Tillandsia cornuta	Lemeltonia cornuta
+Tillandsia dodsonii	Lemeltonia dodsonii
+Tillandsia narthecioides	Lemeltonia narthecioides
+Tillandsia scaligera	Lemeltonia scaligera
+Lycianthes escuintlensis	Lycianthes heteroclita
+Sarcorhachis sydowii	Manekia incurva
+Marcgravia membranacea	Marcgravia nervosa
+Ectozoma pavonii	Markea pavonii
+Cryptocentrum flavum	Maxillaria cryptocentroides
+Trigonidium insigne	Maxillaria johannyae
+Maxillaria williamsii	Maxillaria nanegalensis
+Cryptocentrum peruvianum	Maxillaria novoae
+Trigonidium riopalenquense	Maxillaria soulangeana
+Cryptocentrum standleyi	Maxillaria standleyi
+Inti vanderwerffii	Maxillaria vanderwerffii
+Tectaria sodiroi	Mickelia nicotianifolia
+Bolbitis oligarchica	Mickelia oligarchica
+Clidemia acostae	Miconia acostae
+Ossaea boekei	Miconia boekei
+Conostegia centronioides	Miconia conocentronioides
+Conostegia micrantha	Miconia conomicrantha
+Clidemia epiphytica	Miconia neoepiphytica
+Miconia neomicrantha	Miconia rubescens
+Leandra dichotoma	Miconia sulcicaulis
+Conostegia tenuifolia	Miconia tenuifolia
+Licania macrocarpa	Moquilea magnifructa
+Licania megalophylla	Moquilea megalophylla
+Myrcia magnoliifolia	Myrcia splendens
+Neurolaena lobata	Neurolaena lobata
+Gloxinia dodsonii	Nomopyle dodsonii
+Ocotea floccifera	Ocotea insularis
+Ocotea leucoxylon	Ocotea leucoxylon
+Sigmatostalix picta	Oncidium poikilostalix
+Brevilongium globuliferum	Otoglossum globuliferum
+Oncidium globuliferum	Otoglossum globuliferum
+Lycopodiella cernua	Palhinhaea cernua
+Psychotria stenostachya	Palicourea stenostachya
+Phthirusa pyrifolia	Passovia pyrifolia
+Paullinia grandifolia	Paullinia ingifolia
+Peperomia serpens	Peperomia serpens
+Huperzia dichaeoides	Phlegmariurus dichaeoides
+Huperzia sarmentosa	Phlegmariurus sarmentosus
+Pilea donnell-smithiana	Pilea purulensis
+Piper fraseri	Piper appendiculatum
+Trianaeopiper filistilum	Piper filistilum
+Piper auriculatum	Piper macropiper
+Piper pseudonobile	Piper obliquum
+Piper debilicaule	Piper subsessilifolium
+Plagiochila bursata	Plagiochila aerea
+Dicranoglossum polypodioides	Pleopeltis hookeri
+Acronia dibolia	Pleurothallis dibolia
+Cleome hispidula	Podandrogyne hispidula
+Polycycnis morganii	Polycycnis lepida
+Posoqueria maxima	Posoqueria coriacea
+Matisia grandifolia	Quararibea grandifolia
+Tillandsia venusta	Racinaea venusta
+Aechmea aciculosa	Ronnbergia aciculosa
+Ronnbergia nidularioides	Ronnbergia aciculosa
+Blechum brownei	Ruellia blechum
+Bauhinia guianensis	Schnella guianensis
+Schefflera cajambrensis	Sciodaphyllum cajambrense
+Polygala glochidata	Senega glochidata
+Smilax mollis	Smilax mollis
+Solanum circinatum	Solanum splendens
+Pleurothallis costaricensis	Specklinia costaricensis
+Spermacoce exilis	Spermacoce exilis
+Borreria remota	Spermacoce remota
+Pleurothallis deregularis	Stelis deregularis
+Pleurothallis imraei	Stelis imraei
+Stelis barbata	Stelis microchila
+Pleurothallis pidax	Stelis pidax
+Strychnos toxifera	Strychnos toxifera
+Paragonia pyramidata	Tanaecium pyramidatum
+Tectaria rivalis	Tectaria rivalis
+Lindernia crustacea	Torenia crustacea
+Paradrymonia hypocyrta	Trichodrymonia hypocyrta
+Staphylea occidentalis	Turpinia occidentalis
+Eucharis astrophiala	Urceolina astrophiala
+Carica microcarpa	Vasconcellea microcarpa
+Vernonia baccharoides	Vernonanthura patens
+Tillandsia anceps	Wallisia anceps
