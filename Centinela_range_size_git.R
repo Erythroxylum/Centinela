@@ -30,7 +30,7 @@ setwd("./")
 ## GeoTIFF raster
 raster_path <- "elevation_PAN_COL_PER_ECU_0.5sec.tif"
 ## CSV of elevation ranges
-elev_csv_path <- "elevchunk_aa"
+elev_csv_path <- "elev_species_final.csv"
 ## GBIF archive
 GBIF <- "Centinela_GBIF_873sp_28-nov-23_382204records_clean_CentinelaManual.csv"
 # name of output EOO table
