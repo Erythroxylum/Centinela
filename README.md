@@ -27,7 +27,7 @@ Centinela_range_size_git.R: R scripts used to estimate species range sizes in th
 Users will need to download their own GBIF data, edit R script to reflect the user environment and filenames, and then run R script on the command line. The large sizes of the rasters and shapes in our analyses made this scripts run very slowly, about 30 minutes per species. I recommend splitting the elev_species_final.csv into several files that can be run in parallel on a server
 
 ## ConR
-The estimation of species ranges used in this paper depends on the use of this great package. Please read the paper, docs, and cite it.
+The estimation of species ranges used in this paper depends on this great package. Please read the paper, docs, and cite it.
 
 Dauby G, Stévart T, Droissart V, et al. ConR: An R package to assist large-scale multispecies preliminary conservation assessments using distribution data. Ecol Evol. 2017; 7: 11292–11303. https://doi.org/10.1002/ece3.3704 (2017).
 
