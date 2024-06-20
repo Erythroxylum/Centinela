@@ -28,7 +28,7 @@ setwd("./")
 ####
 
 ## GeoTIFF raster
-raster_path <- "elevation_PAN_COL_PER_ECU_0.5sec.tif"
+raster_path <- "elevation_COECPAPE_0.5sec_maskedforestCover_30m_COECPAPE_x20_raster80.tif"
 ## CSV of elevation ranges
 elev_csv_path <- "elev_species_final.csv"
 ## GBIF archive
@@ -50,7 +50,7 @@ gbif_data <- read.csv(GBIF, header = T)
 end <- gbif_data %>% 
   distinct(decimalLatitude, decimalLongitude, species, .keep_all = TRUE)
 # select latitude, longitude, and species columns in that order.
-end2 <- end[, c(22,23,10)] # EDIT column numbers.
+end2 <- end[, c(22,23,10)] # EDIT column numbers for latitude, longitude, species (no author)
 colnames(end2) <- c("ddlat", "ddlon", "tax")
 #remove top data
 rm(gbif_data)
@@ -71,8 +71,7 @@ for (targetsp in species_names) {
     
   # Apply the EOO.computing function with terra
   clipped_rastert <- terra::clamp(terra_raster, lower = elevation$min, upper = elevation$max, values=FALSE)
-  #x <- terra::as.polygons(clipped_rastert, round=TRUE, aggregate=TRUE, values=FALSE,na.rm=TRUE)
-  x <- terra::as.polygons(clipped_rastert, values=FALSE,na.rm=TRUE)
+  x <- terra::as.polygons(clipped_rastert, round=TRUE, aggregate=TRUE, values=FALSE,na.rm=TRUE)
   s <- sf::st_as_sf(x)
   EOO_result <- EOO.computing(
     XY=coords_var, 
@@ -80,6 +79,9 @@ for (targetsp in species_names) {
     exclude.area = TRUE, 
     export_shp = TRUE
     )
+
+  write.table(EOO_result$results, paste(gsub(" ","_",targetsp),"_EOO.txt",sep=""))
+  write_sf(EOO_result$spatial, paste(gsub(" ","_",targetsp),"_EOO.shp",sep=""))
     
   # Save the EOO$result to a dataframe
   if (!exists("EOO_dataframe")) {
