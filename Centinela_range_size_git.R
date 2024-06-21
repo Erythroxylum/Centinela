@@ -71,7 +71,7 @@ for (targetsp in species_names) {
     
   # Apply the EOO.computing function with terra
   clipped_rastert <- terra::clamp(terra_raster, lower = elevation$min, upper = elevation$max, values=FALSE)
-  x <- terra::as.polygons(clipped_rastert, round=TRUE, aggregate=TRUE, values=FALSE,na.rm=TRUE)
+  x <- terra::as.polygons(clipped_rastert, values=FALSE, na.rm=TRUE)
   s <- sf::st_as_sf(x)
   EOO_result <- EOO.computing(
     XY=coords_var, 
