@@ -50,7 +50,7 @@ gbif_data <- read.csv(GBIF, header = T)
 end <- gbif_data %>% 
   distinct(decimalLatitude, decimalLongitude, species, .keep_all = TRUE)
 # select latitude, longitude, and species columns in that order.
-end2 <- end[, c(22,23,14)] # EDIT column numbers for latitude, longitude, species (no author)
+end2 <- end[, c(22,23,10)] # EDIT column numbers for latitude, longitude, species (no author)
 colnames(end2) <- c("ddlat", "ddlon", "tax")
 #remove top data
 rm(gbif_data)
