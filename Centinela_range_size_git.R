@@ -50,7 +50,7 @@ gbif_data <- read.csv(GBIF, header = T)
 end <- gbif_data %>% 
   distinct(decimalLatitude, decimalLongitude, species, .keep_all = TRUE)
 # select latitude, longitude, and species columns in that order.
-end2 <- end[, c(22,23,10)] # EDIT column numbers for latitude, longitude, species (no author)
+end2 <- end[, c(22,23,14)] # EDIT column numbers for latitude, longitude, species (no author)
 colnames(end2) <- c("ddlat", "ddlon", "tax")
 #remove top data
 rm(gbif_data)
@@ -116,35 +116,42 @@ for (targetsp in species_names) {
     
     # OPTIONAL: Remove coordinates that fall outside the x shapefile
     coords_sf <- st_as_sf(coords_var, coords = c("ddlon", "ddlat"), crs = st_crs(x_sf))
+    
+    # Find which coordinates fall within the polygons
     valid_indices <- st_within(coords_sf, x_sf, sparse = FALSE)
-    valid_indices3 <- st_within(coords_sf, x_sf, sparse = TRUE)
-    valid_indices2 <- st_within(x_sf, coords_sf, sparse = FALSE)
-    coords_var_valid <- coords_var_valid[complete.cases(coords_var_valid), ]
+    
+    # Filter coords_var based on valid_indices
+    valid_coords <- coords_var[apply(valid_indices, 1, any), ]
+    
     
     # Print the number of valid coordinates
-    cat("     Number of coordinates within forested areas for species", targetsp, ":", nrow(coords_var_valid), "\n")
+    cat("     Number of coordinates within forested areas for species", targetsp, ":", nrow(valid_coords), "\n")
     
     # Skip species if number of valid coordinates is less than 3
-    if (nrow(coords_var_valid) < 3) {
+    if (nrow(valid_coords) < 3) {
       cat("     Not enough valid coordinates for species:", targetsp, "\n")
       next
     }
     
     # Convert filtered coordinates back to data frame with required columns
     coords_var_df <- data.frame(
-      ddlat = coords_var_valid$ddlat,
-      ddlon = coords_var_valid$ddlon,
-      tax = coords_var_valid$tax
+      ddlat = valid_coords$ddlat,
+      ddlon = valid_coords$ddlon,
+      tax = valid_coords$tax
     )
     
     # Apply the EOO.computing function
     EOO_result <- EOO.computing(
-      XY = coords_var_df, 
+      XY = coords_var, 
       country_map = x_sf, 
       exclude.area = TRUE, 
       export_shp = TRUE
     )
     
+    # print EOO
+    cat("     EOO value for species", targetsp, ":", EOO_result$results$eoo, "\n")
+    
+    #store results
     write.table(EOO_result$results, paste(gsub(" ", "_", targetsp), "_EOO.txt", sep = ""))
     write_sf(EOO_result$spatial, paste(gsub(" ", "_", targetsp), "_EOO.shp", sep = ""))
   }, error = function(e) {
